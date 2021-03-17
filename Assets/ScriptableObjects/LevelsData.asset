@@ -154,5 +154,7 @@ MonoBehaviour:
     segments:
     - {fileID: 6999338688440440323, guid: 2c07da8227c97c6418f208e96744393a, type: 3}
     enemies:
-    - {fileID: 1852967516923486, guid: e1b9e21039285c042b92ea66c7f1c444, type: 3}
-    - {fileID: 1897307273657532, guid: 7094eb5fc31a84847a29440d1ce60ec6, type: 3}
+    - {fileID: 142510, guid: 166e2af65c6c46a44ad3eb729b2c1843, type: 3}
+    - {fileID: 141954, guid: 63413d090c6496749a181c790e2b14d3, type: 3}
+    - {fileID: 100038, guid: d00f9a40706cbca46862f88a5d15a0d8, type: 3}
+    - {fileID: 148044, guid: 83f9e87a6c219f54984147340eea1b17, type: 3}

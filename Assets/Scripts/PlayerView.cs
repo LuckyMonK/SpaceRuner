@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Lean.Gui;
 
 public class PlayerView : PlayerElement
 {
     [SerializeField] private Animator anim;
-    [SerializeField] private Transform playerRoot;
+    public Transform playerRoot;
     private PlayerAnimationController animationController;
+    public LeanJoystick joystick;
 
     private void Start()
     {

@@ -213,8 +213,8 @@ namespace Lean.Gui
 		{
 			if (pointer == eventData)
 			{
-				NullPointerNow();
-			}
+                NullPointerNow();
+            }
 		}
 
 		private void NullPointerNow()

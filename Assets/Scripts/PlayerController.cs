@@ -5,11 +5,17 @@ using DG.Tweening;
 
 public class PlayerController : PlayerElement
 {
+    //часть игрока, которая летит по основной траектории
     [SerializeField] private Transform player;
+    private delegate void ProcessPlayerInput();
+    private ProcessPlayerInput ProcessMovement;
+
     public void StartMovement() {
         app.PlayerModel.SetState(PlayerState.Fly);
+        ProcessMovement += FlyingMovement;
         app.PlayerView.SetAnimation(app.PlayerModel.GetState());
         StartCoroutine(Movement());
+
     }
 
     private IEnumerator Movement() {
@@ -32,23 +38,26 @@ public class PlayerController : PlayerElement
     void MoveTo(Vector3 target, float duration)
     {
         player.transform.DOMove(target, duration).SetEase(Ease.Linear);
-        player.transform.DOLookAt(target, duration).SetEase(Ease.Linear);
-        //cor1 = StartCoroutine(AnimateMove(player.position, target, duration));
+        player.transform.DOLookAt(target, duration).SetEase(Ease.Flash);
+    }
 
+    private void Update()
+    {
+        if (app.PlayerModel.GetState() is PlayerState.Fly) {
+            ProcessMovement();
+        }
+    }
+
+    private void FlyingMovement() {
+        if (app.PlayerView.joystick.ScaledValue.magnitude > 0.1f)
+        {
+            app.PlayerView.playerRoot.localPosition = Vector2.Lerp(app.PlayerView.playerRoot.position,
+                app.PlayerView.joystick.ScaledValue * app.PlayerModel.R,
+                1f);
+
+            app.PlayerView.playerRoot.LookAt(player.position + player.forward / 2f);
+        }
     }
 
     
-    //IEnumerator AnimateMove(Vector3 origin, Vector3 target, float duration)
-    //{
-    //    float journey = 0f;
-    //    while (journey <= duration)
-    //    {
-    //        journey = journey + Time.deltaTime;
-    //        float percent = Mathf.Clamp01(journey / duration);
-
-    //        player.position = Vector3.Lerp(origin, target, percent);
-    //        player.rotation = Quaternion.Lerp(player.rotation, Quaternion.LookRotation(target), journey / duration);
-    //        yield return null;
-    //    }
-    //}
 }

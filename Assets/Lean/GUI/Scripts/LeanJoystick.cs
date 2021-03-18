@@ -101,7 +101,6 @@ namespace Lean.Gui
 				return cachedRectTransform;
 			}
 		}
-
 		protected virtual void Update()
 		{
 			var value = Vector2.zero;

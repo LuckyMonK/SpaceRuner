@@ -119,6 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473962}
+  - component: {fileID: 2040042355149440821}
   m_Layer: 0
   m_Name: Glowing Rock Purple 7
   m_TagString: Untagged
@@ -142,6 +143,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2040042355149440821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b041dc0c82173974985159c846100617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageValue: 10
 --- !u!1 &183138
 GameObject:
   m_ObjectHideFlags: 0

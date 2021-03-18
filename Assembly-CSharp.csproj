@@ -64,6 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\RadialSliderUI\Scripts\RadialSlider.cs" />
+    <Compile Include="Assets\Scripts\DamagablePlayer.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Entity\LevelsData.cs" />
     <Compile Include="Assets\Scripts\Level\LevelApplication.cs" />
     <Compile Include="Assets\Scripts\Level\LevelController.cs" />

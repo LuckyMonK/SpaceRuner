@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2314670}
   - component: {fileID: 4150868053219820022}
   - component: {fileID: 6403168057999976079}
+  - component: {fileID: 5357992895046955562}
   m_Layer: 0
   m_Name: glowing_rock_orange_7
   m_TagString: Untagged
@@ -110,6 +111,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5357992895046955562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b041dc0c82173974985159c846100617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageValue: 10
 --- !u!1 &151398
 GameObject:
   m_ObjectHideFlags: 0

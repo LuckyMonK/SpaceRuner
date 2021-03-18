@@ -15,7 +15,7 @@ public class PlayerController : PlayerElement
         ProcessMovement += FlyingMovement;
         app.PlayerView.SetAnimation(app.PlayerModel.GetState());
         StartCoroutine(Movement());
-
+        app.PlayerView.UpdateBars(app.PlayerModel.hpLimit, app.PlayerModel.chargeLimit);
     }
 
     private IEnumerator Movement() {
@@ -57,5 +57,7 @@ public class PlayerController : PlayerElement
 
     }
 
-    
+    public void Damage(int value) {
+        app.PlayerView.UpdateBars(app.PlayerModel._hp - value, app.PlayerModel._weaponCharge);
+    }
 }

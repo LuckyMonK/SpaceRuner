@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelView : LevelElement
 {
     [SerializeField] private Transform levelRoot;
+    [SerializeField] private Transform enemiesRoot;
     public void BuildLevel(LevelData currentLevelData)
     {
         float dt = 1 / currentLevelData.traceLength;
@@ -36,7 +37,7 @@ public class LevelView : LevelElement
                 currentLevelData.traceLength * app.LevelModel.LevelScale * progress) 
                 + new Vector3(Mathf.Sin(angle), Mathf.Cos(angle), 0f) * R;
             
-            Instantiate(currentLevelData.enemies[Random.Range(0, currentLevelData.enemies.Length)], curvePos, Quaternion.identity);
+            Instantiate(currentLevelData.enemies[Random.Range(0, currentLevelData.enemies.Length)], curvePos, Quaternion.identity, enemiesRoot);
             
         }
     }

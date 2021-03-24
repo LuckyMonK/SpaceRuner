@@ -24,6 +24,9 @@ public class PlayerModel : PlayerElement
 
     [SerializeField] private float distance = 0f;
     [SerializeField] private PlayerState state;
+    public AnimationCurve speedCurve;
+
+    public bool isFinish = false;
 
     public void SetState(PlayerState state) {
         this.state = state;

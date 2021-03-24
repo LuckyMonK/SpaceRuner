@@ -15,4 +15,5 @@ public class LevelData {
 
     public GameObject[] segments;
     public GameObject[] enemies;
+
 }

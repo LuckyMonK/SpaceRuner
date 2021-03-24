@@ -18,6 +18,14 @@ public class PlayerController : PlayerElement
         app.PlayerView.UpdateBars(app.PlayerModel.hpLimit, app.PlayerModel.chargeLimit);
     }
 
+    //private IEnumerator ValuesUpdate() {
+    //    float timer = 0f;
+
+    //    while (true) {
+    //        timer += Time.deltaTime;
+    //        yield return null;
+    //    }
+    //}
     private IEnumerator Movement() {
         float time = 0f;
         Vector3 nextPos = Vector3.zero;
@@ -30,8 +38,8 @@ public class PlayerController : PlayerElement
         {
             Vector2 curvePos = new Vector2(currentLevelData.levelCurves[0].Evaluate(dt * i), currentLevelData.levelCurves[1].Evaluate(dt * i));
             nextPos = new Vector3(curvePos.x, curvePos.y, i * levelModel.LevelScale);
-            MoveTo(nextPos, 1f);
-            yield return new WaitForSeconds(1f);
+            MoveTo(nextPos, app.PlayerModel.speed);
+            yield return new WaitForSeconds(app.PlayerModel.speed);
         }
     }
 
@@ -52,7 +60,7 @@ public class PlayerController : PlayerElement
         if (app.PlayerView.joystick.ScaledValue.magnitude > 0.1f)
         {
             Vector2 movement = app.PlayerView.joystick.ScaledValue;
-            app.PlayerView.playerRoot.localPosition = movement * app.PlayerModel.R;
+            app.PlayerView.playerRoot.localPosition = Vector3.MoveTowards(app.PlayerView.playerRoot.localPosition, movement * app.PlayerModel.R, Time.deltaTime / 3f);
         }
 
     }

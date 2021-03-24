@@ -20,5 +20,7 @@ public class WeaponController : MonoBehaviour
 }
 
 public class Weapon {
-    public WeaponView viewNimber;
+    public WeaponView view;
+    public float damage = 1f;
+    public float range = 10f;
 }

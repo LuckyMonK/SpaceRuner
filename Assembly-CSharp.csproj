@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerModel.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerView.cs" />
+    <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />

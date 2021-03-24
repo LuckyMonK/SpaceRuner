@@ -65,19 +65,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\RadialSliderUI\Scripts\RadialSlider.cs" />
+    <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\DamagablePlayer.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyShooter.cs" />
+    <Compile Include="Assets\Scripts\Entity\CharactersData.cs" />
     <Compile Include="Assets\Scripts\Entity\LevelsData.cs" />
+    <Compile Include="Assets\Scripts\Entity\WeaponsData.cs" />
+    <Compile Include="Assets\Scripts\Game\GameApplication.cs" />
+    <Compile Include="Assets\Scripts\Game\GameController.cs" />
+    <Compile Include="Assets\Scripts\Game\GameModel.cs" />
+    <Compile Include="Assets\Scripts\Game\GameView.cs" />
+    <Compile Include="Assets\Scripts\Helpers\SceneManager.cs" />
     <Compile Include="Assets\Scripts\Level\LevelApplication.cs" />
     <Compile Include="Assets\Scripts\Level\LevelController.cs" />
     <Compile Include="Assets\Scripts\Level\LevelModel.cs" />
     <Compile Include="Assets\Scripts\Level\LevelView.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerApplication.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerModel.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerView.cs" />
-    <Compile Include="Assets\Scripts\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerInformation.cs" />
+    <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\GamePanel.cs" />
+    <Compile Include="Assets\Scripts\UI\GameUIController.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />

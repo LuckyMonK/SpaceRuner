@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamagablePlayer : MonoBehaviour
 {
-    [SerializeField] private PlayerController controller;
+    [SerializeField] private GameController controller;
 
     private void OnCollisionEnter(Collision collision)
     {

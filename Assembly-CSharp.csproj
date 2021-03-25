@@ -66,7 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\RadialSliderUI\Scripts\RadialSlider.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
-    <Compile Include="Assets\Scripts\DamagablePlayer.cs" />
+    <Compile Include="Assets\Scripts\Damagable.cs" />
     <Compile Include="Assets\Scripts\EnemiesSearcher.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Entity\CharactersData.cs" />
@@ -82,6 +82,8 @@
     <Compile Include="Assets\Scripts\Level\LevelModel.cs" />
     <Compile Include="Assets\Scripts\Level\LevelView.cs" />
     <Compile Include="Assets\Scripts\PlayerInformation.cs" />
+    <Compile Include="Assets\Scripts\ProjectileComponent.cs" />
+    <Compile Include="Assets\Scripts\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
     <Compile Include="Assets\Scripts\UI\GamePanel.cs" />
     <Compile Include="Assets\Scripts\UI\GameUIController.cs" />

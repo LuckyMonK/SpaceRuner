@@ -42,8 +42,9 @@ GameObject:
   - component: {fileID: 8462114729954748278}
   - component: {fileID: 8452517357215981364}
   - component: {fileID: 8501204980352310364}
-  - component: {fileID: 505348963292236645}
   - component: {fileID: 7913564569857781390}
+  - component: {fileID: 505348963292236645}
+  - component: {fileID: 6549560717882096577}
   m_Layer: 0
   m_Name: SM_Prop_Drone_Insect_01
   m_TagString: Enemy
@@ -127,20 +128,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43864166340991380, guid: c74a66e9d3d2c334aaffde9effbac9cc, type: 2}
---- !u!114 &505348963292236645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8438084251839957780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b041dc0c82173974985159c846100617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageValue: 10
-  isDestroyOnContact: 0
 --- !u!54 &7913564569857781390
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,3 +144,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &505348963292236645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438084251839957780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b041dc0c82173974985159c846100617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageValue: 10
+  isDestroyOnContact: 0
+--- !u!114 &6549560717882096577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438084251839957780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc333a7593e05cc4cbc83f51894216a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 30

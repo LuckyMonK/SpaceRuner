@@ -16,7 +16,8 @@ public class WeaponView : WeaponElement
     public void SetWeaponView(WeaponType type) {
         views[(int)type].SetActive(true);
     }
-    public void SetShootArmsWeight(float endWeight, float time) {
+    public void SetShootArmsWeight(float endWeight, float time, float speed) {
+        anim.speed = speed;
         anim.SetTrigger("ArmIteraction");
         //anim.SetLayerWeight(1, endWeight);
         DOVirtual.Float(anim.GetLayerWeight(1), endWeight, time, (_value) =>

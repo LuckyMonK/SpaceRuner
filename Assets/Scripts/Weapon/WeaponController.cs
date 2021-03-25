@@ -18,17 +18,18 @@ public class WeaponController : WeaponElement
     [SerializeField] private Lean.Gui.LeanJoystick joystick;
     [SerializeField] private AtackState state;
     [SerializeField] private GameApplication gameApplication;
+    [SerializeField] private ProjectileController projectileController;
     public void InitializeWeapon()
     {
         app.WeaponModel.InitializeWeaponData();
-        app.WeaponView.SetWeaponView(app.WeaponModel.weapon.view);
+        app.WeaponView.SetWeaponView(app.WeaponModel.weapon.View);
         //shootingCoroutine = StartCoroutine(Shooting());
     }
 
     private IEnumerator Shooting()
     {
-        app.WeaponView.SetShootArmsWeight(1f, 0.8f);
-        float timer = app.WeaponModel.weapon.shootingCooldown;
+        app.WeaponView.SetShootArmsWeight(1f, 0.8f, 1f / app.WeaponModel.weapon.ShootingCooldown);
+        float timer = app.WeaponModel.weapon.ShootingCooldown;
         //первый выстрел
         if (app.WeaponModel.shootingTargets.Count > 0)
         {
@@ -44,20 +45,21 @@ public class WeaponController : WeaponElement
                 {
                     yield return null;
                 }
-                timer = app.WeaponModel.weapon.shootingCooldown;
+                timer = app.WeaponModel.weapon.ShootingCooldown;
             }
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
                 Shoot();
-                timer = app.WeaponModel.weapon.shootingCooldown;
+                timer = app.WeaponModel.weapon.ShootingCooldown;
             }
             yield return null;
         }
     }
 
-    private void Shoot() {
-        //app.WeaponView.ShootAnimation();
+    public void Shoot() {
+        projectileController.SetProjectile(app.WeaponModel.weapon.Projectile, 
+            app.WeaponModel.shootingTargets, app.WeaponModel.weapon);
     }
 
     private void Update()
@@ -75,15 +77,8 @@ public class WeaponController : WeaponElement
             && state == AtackState.Atack) {
             StopCoroutine(shootingCoroutine);
             state = AtackState.Default;
-            app.WeaponView.SetShootArmsWeight(0f, 0.8f);
+            app.WeaponView.SetShootArmsWeight(0f, 0.8f, 1f);
         }
     }
 
-}
-[System.Serializable]
-public class Weapon {
-    public WeaponType view;
-    public float damage = 1f;
-    public float range = 10f;
-    public float shootingCooldown = 1f;
 }

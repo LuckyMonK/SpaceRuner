@@ -2609,6 +2609,7 @@ GameObject:
   - component: {fileID: 5329681541518618856}
   - component: {fileID: 6631723599926943854}
   - component: {fileID: 4812346955824959007}
+  - component: {fileID: 7506239748915571757}
   m_Layer: 0
   m_Name: Character_CyborgNinja_01
   m_TagString: Enemy
@@ -2713,6 +2714,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7506239748915571757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864009732453869488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc333a7593e05cc4cbc83f51894216a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 20
 --- !u!1 &864010178658677388
 GameObject:
   m_ObjectHideFlags: 0

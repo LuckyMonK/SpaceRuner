@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class GameUIController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private GameObject gameMenuPanel;
+    [SerializeField] private GameObject gamePlayPanel;
+
+    public void OpenGameMenuPanel() {
+        DisableAll();
+        gameMenuPanel.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenGamePlayPanel()
     {
-        
+        DisableAll();
+        gamePlayPanel.SetActive(true);
+    }
+    private void DisableAll() {
+        gameMenuPanel.SetActive(false);
+        gamePlayPanel.SetActive(false);
     }
 }

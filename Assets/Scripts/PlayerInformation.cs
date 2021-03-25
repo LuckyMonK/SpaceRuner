@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInformation : MonoBehaviour
 {
     public static PlayerInformation Instantiate;
-    [SerializeField] private Player playerData;
+    public Player playerData;
 
     private void Awake()
     {
@@ -22,5 +22,6 @@ public class Player {
     public string nickName;
     public int level;
     public Character character;
+    public Weapon weapon;
     public int money;
 }

@@ -9,6 +9,7 @@ public class GameController : GameElement
     [SerializeField] private Transform player;
     private delegate void ProcessPlayerInput();
     private ProcessPlayerInput ProcessMovement;
+    [SerializeField] private WeaponController weaponController;
 
     public void StartMovement() {
         app.PlayerModel.SetState(PlayerState.Fly);
@@ -16,16 +17,11 @@ public class GameController : GameElement
         app.PlayerView.SetAnimation(app.PlayerModel.GetState());
         StartCoroutine(Movement());
         app.PlayerView.UpdateBars(app.PlayerModel.hpLimit, app.PlayerModel.chargeLimit);
+
+        weaponController.InitializeWeapon();
     }
 
-    //private IEnumerator ValuesUpdate() {
-    //    float timer = 0f;
 
-    //    while (true) {
-    //        timer += Time.deltaTime;
-    //        yield return null;
-    //    }
-    //}
     private IEnumerator Movement() {
         float time = 0f;
         Vector3 nextPos = Vector3.zero;

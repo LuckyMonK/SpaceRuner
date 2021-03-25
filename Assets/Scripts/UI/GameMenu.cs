@@ -7,4 +7,14 @@ public class GameMenu : MonoBehaviour
     [SerializeField] private Button tavernBtn;
     [SerializeField] private Button startGameBtn;
 
+    [SerializeField] private GameController GameController;
+    [SerializeField] private GameUIController GameUIController;
+
+    private void Start()
+    {
+        startGameBtn.onClick.AddListener( () => {
+            GameController.StartMovement();
+            GameUIController.OpenGamePlayPanel();
+        });
+    }
 }

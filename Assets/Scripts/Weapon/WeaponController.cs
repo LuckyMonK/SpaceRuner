@@ -6,20 +6,28 @@ public enum WeaponRangeType {
     Melee,
     Gun
 }
+
+public enum AtackState { 
+    Default,
+    Atack
+}
 public class WeaponController : WeaponElement
 {
 
     private Coroutine shootingCoroutine;
-
+    [SerializeField] private Lean.Gui.LeanJoystick joystick;
+    [SerializeField] private AtackState state;
+    [SerializeField] private GameApplication gameApplication;
     public void InitializeWeapon()
     {
         app.WeaponModel.InitializeWeaponData();
         app.WeaponView.SetWeaponView(app.WeaponModel.weapon.view);
-        shootingCoroutine = StartCoroutine(Shooting());
+        //shootingCoroutine = StartCoroutine(Shooting());
     }
 
     private IEnumerator Shooting()
     {
+        app.WeaponView.SetShootArmsWeight(1f, 0.8f);
         float timer = app.WeaponModel.weapon.shootingCooldown;
         //первый выстрел
         if (app.WeaponModel.shootingTargets.Count > 0)
@@ -49,7 +57,26 @@ public class WeaponController : WeaponElement
     }
 
     private void Shoot() {
-        app.WeaponView.ShootAnimation();
+        //app.WeaponView.ShootAnimation();
+    }
+
+    private void Update()
+    {
+        if (gameApplication.PlayerModel.GetState() != PlayerState.Fly) {
+            return;
+        }
+        if (joystick.ScaledValue.magnitude < 0.1 && state == AtackState.Default 
+            && app.WeaponModel.shootingTargets.Count > 0)
+        {
+            state = AtackState.Atack;
+            shootingCoroutine = StartCoroutine(Shooting());
+        }
+        else if ((joystick.ScaledValue.magnitude > 0.1 || app.WeaponModel.shootingTargets.Count == 0) 
+            && state == AtackState.Atack) {
+            StopCoroutine(shootingCoroutine);
+            state = AtackState.Default;
+            app.WeaponView.SetShootArmsWeight(0f, 0.8f);
+        }
     }
 
 }

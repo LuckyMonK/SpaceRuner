@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 
 public enum WeaponType
 {
@@ -16,7 +16,12 @@ public class WeaponView : WeaponElement
     public void SetWeaponView(WeaponType type) {
         views[(int)type].SetActive(true);
     }
-    public void ShootAnimation() { 
-        
+    public void SetShootArmsWeight(float endWeight, float time) {
+        anim.SetTrigger("ArmIteraction");
+        //anim.SetLayerWeight(1, endWeight);
+        DOVirtual.Float(anim.GetLayerWeight(1), endWeight, time, (_value) =>
+        {
+            anim.SetLayerWeight(1, _value);
+        });
     }
 }

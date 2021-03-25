@@ -399,6 +399,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   app: {fileID: 393017826}
+  joystick: {fileID: 268661568}
+  state: 0
+  gameApplication: {fileID: 393017825}
 --- !u!1 &393017822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,7 +3107,7 @@ MonoBehaviour:
       view: 0
       damage: 1
       range: 10
-      shootingCooldown: 1
+      shootingCooldown: 0.1
     money: 3000
 --- !u!4 &1870997173
 Transform:

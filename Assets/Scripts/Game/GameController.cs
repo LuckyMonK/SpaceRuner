@@ -9,7 +9,7 @@ public class GameController : GameElement
     [SerializeField] private Transform player;
     private delegate void ProcessPlayerInput();
     private ProcessPlayerInput ProcessMovement;
-    [SerializeField] private WeaponController weaponController;
+    [SerializeField] private WeaponApplication weapon;
 
     public void StartMovement() {
         app.PlayerModel.SetState(PlayerState.Fly);
@@ -18,7 +18,7 @@ public class GameController : GameElement
         StartCoroutine(Movement());
         app.PlayerView.UpdateBars(app.PlayerModel.hpLimit, app.PlayerModel.chargeLimit);
 
-        weaponController.InitializeWeapon();
+        weapon.WeaponController.InitializeWeapon();
     }
 
 

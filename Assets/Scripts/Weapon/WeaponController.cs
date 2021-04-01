@@ -22,7 +22,7 @@ public class WeaponController : WeaponElement
     public void InitializeWeapon()
     {
         app.WeaponModel.InitializeWeaponData();
-        app.WeaponView.SetWeaponView(app.WeaponModel.weapon.View);
+        app.WeaponView.SetWeaponView(app.WeaponModel.weapon.WeaponRangeType);
         //shootingCoroutine = StartCoroutine(Shooting());
     }
 

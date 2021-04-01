@@ -81,9 +81,15 @@
     <Compile Include="Assets\Scripts\Level\LevelController.cs" />
     <Compile Include="Assets\Scripts\Level\LevelModel.cs" />
     <Compile Include="Assets\Scripts\Level\LevelView.cs" />
+    <Compile Include="Assets\Scripts\ObjectRangeDestroyer.cs" />
     <Compile Include="Assets\Scripts\PlayerInformation.cs" />
     <Compile Include="Assets\Scripts\ProjectileComponent.cs" />
     <Compile Include="Assets\Scripts\ProjectileController.cs" />
+    <Compile Include="Assets\Scripts\Tavern\TavernApplication.cs" />
+    <Compile Include="Assets\Scripts\Tavern\TavernController.cs" />
+    <Compile Include="Assets\Scripts\Tavern\TavernModel.cs" />
+    <Compile Include="Assets\Scripts\Tavern\TavernUIController.cs" />
+    <Compile Include="Assets\Scripts\Tavern\TavernView.cs" />
     <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
     <Compile Include="Assets\Scripts\UI\GamePanel.cs" />
     <Compile Include="Assets\Scripts\UI\GameUIController.cs" />

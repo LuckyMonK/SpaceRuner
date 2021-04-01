@@ -16,5 +16,9 @@ public class GameMenu : MonoBehaviour
             GameController.StartMovement();
             GameUIController.OpenGamePlayPanel();
         });
+
+        tavernBtn.onClick.AddListener(() => {
+            FindObjectOfType<SceneManager>().LoadScene(Scene.Tavern);
+        });
     }
 }

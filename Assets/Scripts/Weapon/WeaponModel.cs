@@ -19,10 +19,31 @@ public enum ProjectileSourceType
     Enemy
 }
 
+public enum WeaponPart { 
+    Grip,           //ручка
+    HandGuard,      //подставка для второй руки
+    Magazine,       //магазин
+    Butt,           //приклад
+    Sight,          //прицел
+    Barrel          //дуло
+}
+
+public enum WeaponType
+{
+    Firearms,
+    Melee
+}
+
+[System.Serializable]
+public class WeaponParametr {
+    public GameObject view;
+
+}
+
 [System.Serializable]
 public class Weapon
 {
-    public WeaponType View;
+    public WeaponType WeaponRangeType;
     public float Damage = 1f;
     public float Range = 10f;
     public float ShootingCooldown = 1f;

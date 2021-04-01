@@ -7,6 +7,7 @@ using TMPro;
 using DG.Tweening;
 
 public enum Scene { 
+    LoadingMenu,
     CoreGame,
     Tavern
 }
@@ -28,13 +29,17 @@ public class SceneManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        LoadScene(1);
+        LoadScene(Scene.CoreGame);
     }
 
     public void LoadScene(int i) {
         StartCoroutine(Loading(i));
     }
 
+    public void LoadScene(Scene scene)
+    {
+        StartCoroutine(Loading((int)scene));
+    }
     private IEnumerator Loading(int i) {
         canvas.SetActive(true);
         DOVirtual.Float(0, 1, 0.3f, (_value) => {

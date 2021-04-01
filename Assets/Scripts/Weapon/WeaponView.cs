@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public enum WeaponType
-{
-    Riffle,
-    Sword
-}
 public class WeaponView : WeaponElement
 {
     [SerializeField] private Animator anim;

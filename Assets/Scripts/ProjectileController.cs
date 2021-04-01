@@ -15,6 +15,7 @@ public class ProjectileController : MonoBehaviour
             ProjectileComponent proj = instantiatedProjectile.GetComponent<ProjectileComponent>();
             proj.projectileInformation = projectile;
             instantiatedProjectile.velocity = (targets[0].position - transform.position).normalized  * projectile.Speed;
+            instantiatedProjectile.rotation = Quaternion.LookRotation((targets[0].position - transform.position).normalized);
         }
         
     }

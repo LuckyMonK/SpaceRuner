@@ -6,7 +6,6 @@ public class EnemiesSearcher : MonoBehaviour
 {
     [SerializeField] private WeaponModel WeaponModel;
     [SerializeField] private BoxCollider collider;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Enemy")) {

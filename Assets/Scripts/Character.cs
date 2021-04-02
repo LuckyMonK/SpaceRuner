@@ -12,4 +12,7 @@ public class Character
     public float energy;
     public GameObject viewPrefab;
     public Weapon weapon;
+
+    public string story;
+    public int cost;
 }

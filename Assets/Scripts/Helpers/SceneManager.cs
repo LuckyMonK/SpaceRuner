@@ -24,12 +24,13 @@ public class SceneManager : MonoBehaviour
         {
             Instantiate = this;
             DontDestroyOnLoad(gameObject);
+            LoadScene(Scene.CoreGame);
         }
         else {
             Destroy(gameObject);
         }
 
-        LoadScene(Scene.CoreGame);
+        
     }
 
     public void LoadScene(int i) {

@@ -7,6 +7,9 @@ public class TavernModel : TavernElement
     public List<Character> characters;
     public CharactersData data;
 
+    public int curentIndex;
+
+    public PlayerInformation playerInformation;
     
     public void FillData() {
         for (int i = 0; i < app.TavernView.playersSpawnPlaces.Length; i++) {
@@ -17,6 +20,8 @@ public class TavernModel : TavernElement
 
             AddUniqCharacter();
         }
+
+        playerInformation = FindObjectOfType<PlayerInformation>();
     }
 
     private void AddUniqCharacter() {

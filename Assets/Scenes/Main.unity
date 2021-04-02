@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -473,6 +473,29 @@ MonoBehaviour:
       energy: 100
       viewPrefab: {fileID: 1476115335562382, guid: 1b20caf01959ecb409333fb9aa0b81da,
         type: 3}
+      weapon:
+        WeaponRangeType: 0
+        Damage: 1
+        Range: 10
+        ShootingCooldown: 1
+        Projectile:
+          projectileSource: 0
+          Speed: 0
+          ProjectileComponent: {fileID: 0}
+          Damage: 0
+      story: 
+      cost: 0
+    weapon:
+      WeaponRangeType: 0
+      Damage: 1
+      Range: 10
+      ShootingCooldown: 1
+      Projectile:
+        projectileSource: 0
+        Speed: 50
+        ProjectileComponent: {fileID: 3720353310947512269, guid: 8fe5e172677079944b836cffa618eae4,
+          type: 3}
+        Damage: 50
     money: 3000
 --- !u!4 &951531275
 Transform:

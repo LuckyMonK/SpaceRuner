@@ -31,6 +31,8 @@ MonoBehaviour:
         ProjectileComponent: {fileID: 3720353310947512269, guid: 8fe5e172677079944b836cffa618eae4,
           type: 3}
         Damage: 1
+    story: long story about bad and good
+    cost: 100
   - name: Nisha Marharyta
     forwardSpeed: 1
     evasionSpeed: 1
@@ -49,6 +51,8 @@ MonoBehaviour:
         ProjectileComponent: {fileID: 3720353310947512269, guid: 8fe5e172677079944b836cffa618eae4,
           type: 3}
         Damage: 1
+    story: long story about bad and good
+    cost: 90
   - name: "Daphn\xE9e Raginmund"
     forwardSpeed: 1
     evasionSpeed: 1
@@ -67,6 +71,8 @@ MonoBehaviour:
         ProjectileComponent: {fileID: 3720353310947512269, guid: 8fe5e172677079944b836cffa618eae4,
           type: 3}
         Damage: 1
+    story: long story about bad and good
+    cost: 30
   - name: Apphia Tyrrell
     forwardSpeed: 1
     evasionSpeed: 1
@@ -85,6 +91,8 @@ MonoBehaviour:
         ProjectileComponent: {fileID: 3720353310947512269, guid: 8fe5e172677079944b836cffa618eae4,
           type: 3}
         Damage: 1
+    story: long story about bad and good
+    cost: 300
   - name: Sigeberht Shakuntala
     forwardSpeed: 1
     evasionSpeed: 1
@@ -103,3 +111,5 @@ MonoBehaviour:
         ProjectileComponent: {fileID: 3720353310947512269, guid: 8fe5e172677079944b836cffa618eae4,
           type: 3}
         Damage: 1
+    story: long story about bad and good
+    cost: 332
